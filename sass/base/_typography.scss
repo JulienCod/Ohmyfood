@@ -1,2 +1,11 @@
-// font-family: 'Roboto', sans-serif;
-// font-family: 'Shrikhand', cursive;
+// police
+
+$font-text: 'Roboto', sans-serif;
+$font-title: 'Shrikhand', cursive;
+
+*{
+    font-family: $font-text;
+}
+h1, h2, h3, h4 {
+    font-family: $font-title;
+}
