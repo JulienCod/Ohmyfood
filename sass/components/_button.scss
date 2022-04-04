@@ -1,0 +1,11 @@
+@use "../utils/variables";
+
+.btn{
+    font-size: 1rem;
+    padding: 1.1rem 1.5rem;
+    border-radius: 1.6rem;
+    margin-top: 1.5rem;
+    border: none;
+    background: linear-gradient(variables.$color-secondary, variables.$color-primary);
+    color: #FFFFFF;
+}
