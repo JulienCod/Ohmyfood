@@ -8,4 +8,7 @@
     border: none;
     background: linear-gradient(variables.$color-secondary, variables.$color-primary);
     color: #FFFFFF;
+    &:hover{
+        opacity:0.9;
+    }
 }

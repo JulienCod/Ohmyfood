@@ -21,13 +21,16 @@ h1, h2, h3, h4 {
   background: linear-gradient(#ff79da, #9356dc);
   color: #FFFFFF;
 }
+.btn:hover {
+  opacity: 0.9;
+}
 
 #header-title {
   display: flex;
   align-items: center;
   position: relative;
   padding: 0.5rem 1.25rem;
-  box-shadow: 0px -5px 10px black;
+  box-shadow: 3px 3px 17px -10px #000000;
 }
 #header-title i {
   font-size: 1.25rem;
@@ -55,7 +58,7 @@ h1, h2, h3, h4 {
   opacity: 0.7;
 }
 #top #location i {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 #top #explorer {
   background-color: #F6F6F6;
@@ -68,7 +71,56 @@ h1, h2, h3, h4 {
 #top #explorer #explorer-para {
   padding: 1rem 0rem;
   font-size: 1.1rem;
-  opacity: 0.7;
+  opacity: 0.5;
+}
+
+#operation {
+  padding: 1rem;
+  counter-reset: steps;
+}
+#operation p {
+  font-size: 1.5rem;
+  padding: 1.5rem 0rem;
+}
+#operation ol {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#operation li {
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 2rem 1rem;
+  flex-grow: 1;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 3px 3px 17px -10px #000000;
+}
+#operation li i {
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+#operation li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: #FFFFFF;
+  background-color: #9356dc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  position: relative;
+  right: 1.5rem;
+}
+#operation li:hover {
+  background: #9356dc;
+  background: rgba(147, 86, 220, 0.1);
+}
+#operation li:hover i {
+  color: #9356dc;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

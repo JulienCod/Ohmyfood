@@ -1,0 +1,52 @@
+@use "../utils/variables";
+@use "../utils/box-shadow";
+@use "../utils/background-opacity" as bgo;
+
+#operation{
+    padding: 1rem;
+    counter-reset: steps;
+    & p{
+        font-size: 1.5rem;
+        padding: 1.5rem 0rem;
+    }
+    & ol{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    & li{
+        display: flex;
+        align-items: center;
+        background-color: variables.$color-background-base;
+        padding: 2rem 1rem;
+        flex-grow: 1;
+        border-radius: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        @include box-shadow.shadow-base;
+        
+        & i{
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            opacity:0.5;
+        }
+        &::before{
+            content: counter(steps);
+            counter-increment: steps;
+            color:#FFFFFF;
+            background-color: variables.$color-primary;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50%; 
+            position: relative;
+            right: 1.5rem;
+        }
+        &:hover{
+            @include bgo.background-opacity(variables.$color-primary, 0.1);
+            i{
+                color: variables.$color-primary;
+                opacity: 1;
+            }
+        }
+    }
+}
