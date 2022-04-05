@@ -5,32 +5,40 @@
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    & #location{
+
+    #location{
         background-color: variables.$color-background-grey;
         display: flex;
         justify-content: center;
         padding:1rem;
         font-size: 1rem;
-        & p{
+
+        p{
             padding:0rem 1.5rem;
             opacity: 0.7;
         }
-        & i{
+
+        i{
             opacity: 0.5;
         }
+
     }
-    & #explorer{
+
+    #explorer{
         background-color: variables.$color-background-base;
         padding: 3rem 2rem;
-        & #explorer-title{
+
+        &__title{
             font-size: 1.5rem;
             padding:0rem 1rem;
         }
-        & #explorer-para{
+
+        &__para{
             padding: 1rem 0rem;
             font-size: 1.1rem;
             opacity: 0.5;
         }
+
     }
 
 }
