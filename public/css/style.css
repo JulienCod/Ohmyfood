@@ -42,7 +42,7 @@ h1 {
 
 header {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 #top {
@@ -128,7 +128,7 @@ header {
 }
 
 .restaurants {
-  padding: 1rem;
+  padding: 1rem 1rem 4rem;
   background: #F6F6F6;
 }
 .restaurants h2 {
@@ -141,7 +141,7 @@ header {
 }
 .restaurants__list a {
   text-decoration: none;
-  color: black;
+  color: #000000;
 }
 
 .card {
@@ -198,6 +198,40 @@ header {
 }
 .card__icon:hover .far {
   display: none;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+.footer {
+  background: #353535;
+  color: #FFFFFF;
+  padding: 2rem 1rem;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__icon1 {
+  padding-right: 1rem;
+}
+.footer__icon2 {
+  padding-right: 0.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,6 +1,8 @@
 // utils
 @import "./utils/variables";
 @import "./utils/box-shadow";
+@import "./utils/background-opacity";
+@import "./utils/reset-link";
 
 // base
 @import "./base/base";
@@ -14,5 +16,6 @@
 @import "./layouts/section";
 @import "./layouts/operation";
 @import "./layouts/restaurants";
+@import "./layouts/footer";
 
 // pages
