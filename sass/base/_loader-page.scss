@@ -1,0 +1,57 @@
+@use "./typography" as typo;
+@use "../utils/variables";
+@use "../utils/animation" as anim;
+
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.9) ;
+    animation: loader 1s ease 3s 1 normal both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container-item{
+        display: flex;
+        position: relative;
+        
+        div{
+            font-family: typo.$font-title ;
+            font-size: 2.5rem;
+            background: -webkit-linear-gradient(variables.$color-secondary, variables.$color-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__item{
+        padding: 0.5rem;
+        animation: jump 0.8s ease-in-out 0s 1 normal running;
+
+
+        &--1{
+            animation-delay: 0.25s;
+        }
+        &--2{
+            animation-delay: 0.5s;
+        }
+        &--3{
+            animation-delay: 0.75s;
+        }
+        &--4{
+            animation-delay: 1s;
+        }
+        &--5{
+            animation-delay: 1.25s;
+        }
+        &--6{
+            animation-delay: 1.5s;
+        }
+        &--7{
+            animation-delay: 1.75s;
+        }
+        &--8{
+            animation-delay: 2.0s;
+        }
+    }
+}
