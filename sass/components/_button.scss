@@ -1,14 +1,18 @@
 @use "../utils/variables";
+@use "../utils/box-shadow" as bs;
 
 .btn{
     font-size: 1rem;
-    padding: 1.1rem 1.5rem;
+    padding: 1rem 3rem;
     border-radius: 1.6rem;
-    margin-top: 1.5rem;
     border: none;
     background: linear-gradient(variables.$color-secondary, variables.$color-primary);
     color: #FFFFFF;
+    @include bs.shadow-base;
+    transition: all 0.3s ease-in-out;
     &:hover{
         opacity:0.9;
+        transform: scale(1.02);
+        @include bs.shadow-hover;
     }
 }

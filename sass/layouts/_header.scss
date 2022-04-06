@@ -16,5 +16,7 @@
     }
 }
 header{
-    @include link.reset-link;
+    a{
+        @include link.reset-link;
+    }
 }

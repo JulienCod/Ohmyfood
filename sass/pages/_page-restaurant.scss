@@ -1,5 +1,6 @@
 @use "../utils/variables";
 @use "../base/typography" as typo;
+@use "../utils/box-shadow" as bs;
 
 .img-restaurant{
     max-height: 300px;
@@ -14,7 +15,7 @@
     border-top-right-radius: 2rem;
     position:relative;
     bottom:3.25rem;
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
     margin-bottom: -3.25rem;
     display: flex;
     flex-direction: column;
@@ -22,6 +23,7 @@
     &__title{
         display: flex;
         justify-content: space-between;
+        padding: 0rem 1rem;
         >h2{
             font-family: typo.$font-title ;
             font-weight: 500;
@@ -56,6 +58,7 @@
     
     &__list{
         margin: 0.5rem 0rem;
+        padding: 0rem 1rem;
         max-width: 100%;
         overflow: hidden;
     }
@@ -80,10 +83,11 @@
         display: flex;
         background: #FFFFFF;
         margin: 1rem 0rem;
+        
         border-radius: 1rem;
         padding: 1rem 0.5rem;
         overflow: hidden;
-
+        @include bs.shadow-base;
         
         &:hover {
             .menu__confirmation{
@@ -131,4 +135,5 @@
 }
 .container-btn{
     align-self: center ;
+    margin-bottom: 2rem;
 }

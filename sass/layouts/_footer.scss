@@ -18,6 +18,10 @@
     }
     a{
         @include link.reset-link(#ffffff);
+        
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__icon1{
         padding-right:1rem ;
