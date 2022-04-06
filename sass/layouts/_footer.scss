@@ -13,12 +13,13 @@
     }
     &__link{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         gap:0.5rem;
     }
     a{
         @include link.reset-link(#ffffff);
-        
+        width: fit-content;
         &:hover{
             text-decoration: underline;
         }
