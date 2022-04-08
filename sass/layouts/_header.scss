@@ -1,12 +1,9 @@
-@use "../utils/box-shadow";
-@use "../utils/reset-link" as link;
-
 #header-title{
     display: flex;
     align-items: center;
     position: relative;
     padding:0.5rem 1.25rem;
-    @include box-shadow.shadow-base;
+    @include shadow-base;
     & i{
         font-size: 1.25rem;
     }
@@ -17,6 +14,6 @@
 }
 header{
     a{
-        @include link.reset-link;
+        @include reset-link;
     }
 }

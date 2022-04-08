@@ -1,0 +1,41 @@
+@mixin background-opacity($color, $opacity){
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+@mixin shadow-base{
+    box-shadow: 3px 3px 17px -10px #000000;
+}
+
+@mixin shadow-hover{
+    box-shadow: 3px 3px 17px -5px #000000;
+}
+
+@mixin reset-link ($color :#000000){
+    text-decoration: none;
+    color: $color;
+}
+
+@mixin flex-content ($justify-content) {
+    display:flex;
+    justify-content: $justify-content;
+}
+
+@mixin flex-direction ($direction){
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin max-width ($max-width: 1440px, $margin: auto){
+    max-width: $max-width;
+    margin: $margin;
+}
+
+@mixin gradient-color{
+    background: linear-gradient($color-secondary, $color-primary);
+}
+
+@mixin cover-img{
+    position:absolute;
+    object-fit: cover;
+}

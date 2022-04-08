@@ -1,24 +1,23 @@
 // utils
+
 @import "./utils/variables";
-@import "./utils/animation";
-@import "./utils/box-shadow";
-@import "./utils/background-opacity";
-@import "./utils/reset-link";
+@import "./utils/mixins";
 
 // base
-@import "./base/loader-page";
+
 @import "./base/base";
 @import "./base/typography";
 
 // components
+
 @import "./components/button";
+@import "./components/heart";
 
 // layouts
+
 @import "./layouts/header";
-@import "./layouts/section";
-@import "./layouts/operation";
-@import "./layouts/restaurants";
 @import "./layouts/footer";
 
 // pages
+
 @import "./pages/page-restaurant";

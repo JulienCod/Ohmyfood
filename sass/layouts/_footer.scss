@@ -1,24 +1,21 @@
 @use "../utils/variables";
-@use "../base/typography" as typo;
-@use "../utils/reset-link" as link;
 
 .footer{
     background: variables.$color-background-footer;
     color: #FFFFFF;
     padding: 2rem 1rem;
     &__title{
-        font-family: typo.$font-title;
-        font-weight: 500;
+        @include max-width;
         padding-bottom: 1rem;
     }
     &__link{
-        display: flex;
+        @include max-width;
+        @include flex-direction(column);
         flex-wrap: wrap;
-        flex-direction: column;
         gap:0.5rem;
     }
     a{
-        @include link.reset-link(#ffffff);
+        @include reset-link(#ffffff);
         width: fit-content;
         &:hover{
             text-decoration: underline;
