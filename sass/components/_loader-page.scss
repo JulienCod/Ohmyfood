@@ -10,8 +10,24 @@
     background-color: rgba($color: #FFFFFF, $alpha: 0.9) ;
     animation: loader 1s ease 3s 1 normal both;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    &__border1{
+        position: relative;
+        height: 0.5rem;
+        width: 100%;
+        background-color: $color-taitiary;
+        animation: loader-border1 3s ease-in-out 0s 1 normal both;
+
+    }
+    &__border2{
+        position: relative;
+        height: 0.5rem;
+        width: 100%;
+        background-color: $color-taitiary;
+        animation: loader-border2 1s ease-in-out 1s 1 normal both;
+    }
     &__container-item{
         display: flex;
         position: relative;
@@ -54,6 +70,30 @@
         &--8{
             animation-delay: 2.0s;
         }
+    }
+}
+@keyframes loader-border1 {
+    0%{
+        transform: translateX(100%);
+            background-color: $color-taitiary;
+    }
+    25%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+        background-color: $color-taitiary;
+    }
+}
+@keyframes loader-border2 {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
     }
 }
 @keyframes loader {

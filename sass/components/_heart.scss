@@ -1,60 +1,44 @@
 @use "../utils/variables";
 
 .heart{
+    &__container {
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        position: relative;
+        right: 2rem;
+        padding:1rem;
+        bottom: 1.1rem;
+        & input[type="checkbox"]{
+            position: absolute;
+            cursor: pointer;
+            height: 1.8rem;
+            width: 1.8rem;
+            z-index: 2;
+            opacity: 0;
+            &:checked{
+                ~.heart__bold{
+                    opacity:1;
+                    transform: scale(1.25);
+                }
+            }
+        }
+        &:hover{
+            .heart__light{
+                transform: scale(1.05);
+            }
+        }
+    }
     &__bold{
-        z-index: -1;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
         background: -webkit-linear-gradient(variables.$color-secondary, variables.$color-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+        transform: scale(0);
     }
-    &:hover{
-        .heart__bold{
-        animation: heart 0.4s ease-in-out 0s 1 normal running ;
-        z-index: 1;
-        }
-        .heart__light{
-            animation: heart-down 0.4s ease-in-out 0s 1 normal running ;
-            z-index: -1;
-        }
-    }
-}
-
-@keyframes heart {
-    0%{
-        background: variables.$color-background-base;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-        z-index: -1;
-        font-size: 0rem;
-    }
-
-    50%{
-        opacity: 0.5;
-        z-index: 0;
-        font-size: 0.9rem;
-    }
-
-    100%{
-        background: -webkit-linear-gradient(variables.$color-secondary, variables.$color-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 1;
-        z-index: 1;
-        font-size: 1.8rem;
-    }
-}
-@keyframes heart-down {
-    0%{
-        opacity: 1;
-        z-index: 1;
-    }
-    50%{
-        opacity: 0.5;
-        z-index: 0;
-    }
-    100%{
-        opacity: 0;
-        z-index: -1;
+    &__light{
+        position: absolute;
     }
 }

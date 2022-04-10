@@ -63,7 +63,7 @@
         @include flex-direction(column);
         flex-wrap: wrap;
         gap: 1rem;
-        @media screen and (min-width:921px){
+        @media screen and (min-width:$min-width){
             flex-direction: row;
         }
     }
@@ -134,7 +134,14 @@
     border-radius: 1rem;
     @include shadow-base;
     background-color: white;
-    flex: 1 1 29.4rem;
+    flex: 1 1 100%;
+    transition: all 0.3s ease;
+    @media screen and (min-width:$min-width) {
+        flex:1 1 calc(50% - 1rem);
+    }
+    &:hover{
+        transform: scale(1.02);
+    }
 
     &__container-img{
         position: relative;
