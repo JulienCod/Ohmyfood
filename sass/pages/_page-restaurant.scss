@@ -39,10 +39,6 @@
         position: relative;
         padding: 0rem 1rem;
     }
-    .heart__container{
-        bottom: 0.5rem;
-        right: 0rem;
-    }
     &__container{
         max-width: 1440px;
         @include flex-direction(column);
@@ -51,6 +47,9 @@
             margin: 0;
         }
     }   
+    &__heart{
+        right: -2.25rem;
+    }
     
     &__list{
         flex:1;
@@ -62,7 +61,7 @@
     &__sub-title{
         padding: 0.5rem 0rem;
         position: relative;
-        h3{
+        &__h3{
             font-size: 1rem;
             font-weight: 400;
         }
@@ -91,10 +90,14 @@
                 margin: -1rem -1rem -1rem -1rem;
                 padding-right: 0.5rem;
             }
-            i{
+            .menu__check-circle{
                 transform: rotateZ(0deg);
             }
         }
+    }
+    &__check-circle{
+        transform:rotateZ(-240deg);
+        transition: transform 0.2s ease-in-out 0.3s;
     }
     &__anim{
         animation: menu 0.5s ease-in-out 0s 1 normal both;
@@ -165,7 +168,7 @@
     &__description{
         overflow: hidden;
         flex: 1 1 calc(100% - 60px);
-        h4, p{
+        &__title-h4, &__paragraph{
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -187,12 +190,6 @@
         margin: -1rem -6.5rem -1rem -1rem;
         transition: all 0.3s ease-in 0.15s;
     }
-    &__wrap-icon{
-        i{
-            transform:rotateZ(-240deg);
-            transition: transform 0.2s ease-in-out 0.3s;
-        }
-    }
 }
 .container-btn{
     align-self: center ;
@@ -201,7 +198,7 @@
 
 @keyframes menu {
     0% {
-        transform: translateY(1rem);
+    transform: translateY(1rem);
       opacity: 0;
     }
     100% {

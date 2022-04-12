@@ -1,19 +1,17 @@
-#header-title{
+.header{
     display: flex;
     align-items: center;
     position: relative;
     padding:0.5rem 1.25rem;
     @include shadow-base;
-    & i{
+    &__link{
+        @include reset-link
+    }
+    &__icon{
         font-size: 1.25rem;
     }
-    & h1{
+    &__title{
         text-align: center;
         flex-grow: 1;
-    }
-}
-header{
-    a{
-        @include reset-link;
     }
 }

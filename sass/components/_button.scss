@@ -9,7 +9,7 @@
     color: #FFFFFF;
     @include shadow-base;
     transition: all 0.3s ease-in-out;
-    &:hover{
+    &--is-hover:hover{
         opacity:0.9;
         transform: scale(1.02);
         @include shadow-hover;

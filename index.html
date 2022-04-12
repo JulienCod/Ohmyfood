@@ -39,8 +39,8 @@
     <!-- Header -->
 
     <header>
-        <div id="header-title">
-            <h1>ohmyfood</h1>
+        <div class="header">
+            <h1 class="header__title">ohmyfood</h1>
         </div>
     </header>
     <!-- End Header -->
@@ -51,17 +51,17 @@
 
         <!-- top section -->
 
-        <div id="top">
+        <div class="top">
 
-            <div id="location">
-                <i class="fas fa-map-marker-alt"></i>
-                <p><strong>Paris, Belleville</strong></p>
+            <div class="location">
+                <i class="location__icon fas fa-map-marker-alt"></i>
+                <p class="location__paragraph"><strong>Paris, Belleville</strong></p>
             </div>
 
-            <div id="explorer">
-                <p id="explorer__title"><strong>Réservez le menu qui vous convient</strong></p>
-                <p id="explorer__para">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#restaurants" class="btn" id="explorer__btn">Explorer nos restaurants</a >
+            <div class="explorer">
+                <p class="explorer__title"><strong>Réservez le menu qui vous convient</strong></p>
+                <p class="explorer__para">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                <a href="#restaurants" class="btn btn--is-hover explorer__link" >Explorer nos restaurants</a >
             </div>
 
         </div>
@@ -70,14 +70,14 @@
 
         <!-- operation section -->
 
-        <section id="operation">
+        <section class="operation">
 
-            <h2>Fonctionnement</h2>
+            <h2 class="operation__title">Fonctionnement</h2>
 
-            <ol>
-                <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-                <li><i class="fas fa-list"></i>Composez votre menu</li>
-                <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+            <ol class="operation__list">
+                <li class="operation__stage"><i class="operation__icon operation__stage--is-hover fas fa-mobile-alt"></i>Choisissez un restaurant</li>
+                <li class="operation__stage"><i class="operation__icon operation__stage--is-hover fas fa-list"></i>Composez votre menu</li>
+                <li class="operation__stage"><i class="operation__icon operation__stage--is-hover fas fa-store"></i>Dégustez au restaurant</li>
             </ol>
 
         </section>
@@ -88,13 +88,13 @@
 
         <section id="restaurants" class="restaurants">
 
-            <h2>Restaurants</h2>
+            <h2 class="restaurants__title-h2">Restaurants</h2>
 
             <div class="restaurants__list">
                 
                 <!-- card 1 -->
-                <article class="card">
-                    <a href="./restaurant-la-palette-du-gout.html" class="card">
+                <article class="card card--is-hover">
+                    <a class="card__link" href="./restaurant-la-palette-du-gout.html">
                         <div class="card__container-img">
                             <img class="card__img" src="./public/images/restaurants/la-palette-du-gout.jpg" alt="photo du restaurant la palette du goût">
                             <span class="card__badge">Nouveau</span>
@@ -105,10 +105,10 @@
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </div>
-                            <label for="check--1" class="heart__container">
-                                <input type="checkbox" name="check" id="check--1" class="heart__check">
-                                <i class="fas fa-heart heart__bold checked"></i>
-                                <i class="far fa-heart heart__light unchecked"></i>
+                            <label for="check--1" class="heart-group">
+                                <input type="checkbox" name="check" id="check--1" class="heart-group__check">
+                                <i class="fas fa-heart card__heart heart-group__bold heart-group__check--is-checked "></i>
+                                <i class="far fa-heart card__heart heart-group__light heart--is-hover "></i>
                             </label>
         
                         </div>
@@ -117,9 +117,9 @@
                 <!-- end card 1 -->
     
                 <!-- card 2 -->
-                <article class="card">
+                <article class="card card--is-hover">
 
-                    <a href="./restaurant-la-note-enchantee.html" class="card">
+                    <a class="card__link" href="./restaurant-la-note-enchantee.html">
                         <div class="card__container-img">
                             <img class="card__img" src="./public/images/restaurants/la-note-enchantee.jpg" alt="photo du restaurant la note enchantée">
                             <div class="card__badge">Nouveau</div>
@@ -130,10 +130,10 @@
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </div>
-                            <label for="check--2" class="heart__container">
-                                <input type="checkbox" name="check" id="check--2" class="heart__check">
-                                <i class="fas fa-heart heart__bold checked"></i>
-                                <i class="far fa-heart heart__light unchecked"></i>
+                            <label for="check--2" class="heart-group">
+                                <input type="checkbox" name="check" id="check--2" class="heart-group__check">
+                                <i class="fas fa-heart card__heart heart-group__bold heart-group__check--is-checked"></i>
+                                <i class="far fa-heart card__heart heart-group__light heart--is-hover"></i>
                             </label>
                         </div>
                 </article>
@@ -141,8 +141,8 @@
                 <!-- end card 2 -->
     
                 <!-- card 3 -->
-                <article class="card">
-                    <a href="./restaurant-a-la-francaise.html" class="card">
+                <article class="card card--is-hover">
+                    <a class="card__link" href="./restaurant-a-la-francaise.html">
                         <div class="card__container-img">
                             <img class="card__img" src="./public/images/restaurants/a-la-française.jpg" alt="photo du restaurant à la française">
                         </div>
@@ -152,10 +152,10 @@
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
                             </div>
-                            <label for="check--3" class="heart__container">
-                                <input type="checkbox" name="check" id="check--3" class="heart__check">
-                                <i class="fas fa-heart heart__bold checked"></i>
-                                <i class="far fa-heart heart__light unchecked"></i>
+                            <label for="check--3" class="heart-group">
+                                <input type="checkbox" name="check" id="check--3" class="heart-group__check">
+                                <i class="fas fa-heart card__heart heart-group__bold heart-group__check--is-checked "></i>
+                                <i class="far fa-heart card__heart heart-group__light heart--is-hover "></i>
                             </label>
                         </div>
 
@@ -164,9 +164,9 @@
                 <!-- end card 3 -->
     
                 <!-- card 4 -->
-                <article class="card">
+                <article class="card card--is-hover">
 
-                    <a href="./restaurant-le-delice-des-sens.html" class="card">
+                    <a class="card__link" href="./restaurant-le-delice-des-sens.html" >
                         <div class="card__container-img">
                             <img class="card__img" src="./public/images/restaurants/le-delice-des-sens.jpg" alt="photo du restaurant le délices des sens">
                         </div>
@@ -176,10 +176,10 @@
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <label for="check--4" class="heart__container">
-                                <input type="checkbox" name="check" id="check--4" class="heart__check">
-                                <i class="fas fa-heart heart__bold checked"></i>
-                                <i class="far fa-heart heart__light unchecked"></i>
+                            <label for="check--4" class="heart-group">
+                                <input type="checkbox" name="check" id="check--4" class="heart-group__check">
+                                <i class="fas fa-heart card__heart heart-group__bold heart-group__check--is-checked "></i>
+                                <i class="far fa-heart card__heart heart-group__light heart--is-hover "></i>
                             </label>
         
                         </div>
@@ -202,11 +202,11 @@
 
     <footer class="footer">
         <h3 class="footer__title">Ohmyfood</h3>
-        <div class="footer__link">
-            <a href="#"><i class="footer__icon1 fas fa-utensils"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fas fa-hands-helping footer__icon2 " ></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:contact@ohmyfood.com">Contact</a>
+        <div class="footer__container-link">
+            <a class="footer__link footer__link--is-hover" href="#"><i class="footer__icon1 fas fa-utensils"></i>Proposer un restaurant</a>
+            <a class="footer__link footer__link--is-hover" href="#"><i class="fas fa-hands-helping footer__icon2 " ></i>Devenir partenaire</a>
+            <a class="footer__link footer__link--is-hover" href="#">Mentions légales</a>
+            <a class="footer__link footer__link--is-hover" href="mailto:contact@ohmyfood.com">Contact</a>
         </div>
     </footer>
 

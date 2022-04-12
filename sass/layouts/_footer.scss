@@ -8,16 +8,16 @@
         @include max-width;
         padding-bottom: 1rem;
     }
-    &__link{
+    &__container-link{
         @include max-width;
         @include flex-direction(column);
         flex-wrap: wrap;
         gap:0.5rem;
     }
-    a{
+    &__link{
         @include reset-link(#ffffff);
         width: fit-content;
-        &:hover{
+        &--is-hover:hover{
             text-decoration: underline;
         }
     }

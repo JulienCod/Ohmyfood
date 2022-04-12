@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="../images/logo/ohmyfood.png" />
+    <link rel="icon" type="image/png" href="./public/images/logo/ohmyfood.png"/>
+
 
     <!-- fortawesone integration -->
     <script src="https://kit.fontawesome.com/329a25a660.js" crossorigin="anonymous"></script>
@@ -25,11 +26,11 @@
     <!-- header -->
 
     <header>
-        <div class="div" id="header-title">
-            <a href="./index.html">
-                <i class="fas fa-arrow-left"></i>
+        <div class="header">
+            <a class="header__link" href="./index.html">
+                <i class="header__icon fas fa-arrow-left"></i>
             </a>
-            <h1>ohmyfood</h1>
+            <h1 class="header__title">ohmyfood</h1>
         </div>
     </header>
 
@@ -53,10 +54,10 @@
 
                 <div class="menu__title">
                     <h2>La note enchantée</h2>
-                    <label for="check" class="heart__container">
-                        <input type="checkbox" name="check" id="check" class="heart__check">
-                        <i class="fas fa-heart heart__bold checked"></i>
-                        <i class="far fa-heart heart__light unchecked"></i>
+                    <label for="check" class="heart-group">
+                        <input type="checkbox" name="check" id="check" class="heart-group__check">
+                        <i class="menu__heart fas fa-heart heart-group__bold heart-group__check--is-checked "></i>
+                        <i class="menu__heart far fa-heart heart-group__light heart--is-hover "></i>
                     </label>
                 </div>
     
@@ -64,30 +65,30 @@
                     <article class="menu__list">
         
                         <div class="menu__sub-title">
-                            <h3>ENTRÉES</h3>
+                            <h3 class="menu__sub-title__h3">ENTRÉES</h3>
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--e1">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--e1">
                             <div class="menu__description">
-                                <h4>Ravioles de foie gras </h4>
-                                <p>Accompagnés de leur crème à la truffe</p>
+                                <h4 class="menu__description__title-h4  " >Ravioles de foie gras </h4>
+                                <p class="menu__description__paragraph">Accompagnés de leur crème à la truffe</p>
                             </div>
                             <div class="menu__price">
                                 <strong>25€</strong>
                             </div>
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--e2">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--e2">
         
                             <div class="menu__description">
-                                <h4>Caviar osciètre</h4>
-                                <p>Sur blini à la farine de blé noir</p>
+                                <h4 class="menu__description__title-h4  " >Caviar osciètre</h4>
+                                <p class="menu__description__paragraph">Sur blini à la farine de blé noir</p>
                             </div>
         
                             <div class="menu__price">
@@ -96,17 +97,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--e3">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--e3">
         
                             <div class="menu__description">
-                                <h4>Homard et espuma de potiron</h4>
-                                <p>Mariné aux zestes d'orange</p>
+                                <h4 class="menu__description__title-h4  " >Homard et espuma de potiron</h4>
+                                <p class="menu__description__paragraph">Mariné aux zestes d'orange</p>
                             </div>
         
                             <div class="menu__price">
@@ -115,17 +116,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--e4">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--e4">
         
                             <div class="menu__description">
-                                <h4>Foie gras de canard cuit entier</h4>
-                                <p>Confiture de figue et pain toasté</p>
+                                <h4 class="menu__description__title-h4  " >Foie gras de canard cuit entier</h4>
+                                <p class="menu__description__paragraph">Confiture de figue et pain toasté</p>
                             </div>
         
                             <div class="menu__price">
@@ -134,7 +135,7 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
@@ -146,14 +147,14 @@
                     <article class="menu__list">
         
                         <div class="menu__sub-title">
-                            <h3>PLATS</h3>
+                            <h3 class="menu__sub-title__h3">PLATS</h3>
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--p1">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--p1">
         
                             <div class="menu__description">
-                                <h4>Noix de coquilles Saint-Jacques</h4>
-                                <p>Sur lit de purée de céleri-rave</p>
+                                <h4 class="menu__description__title-h4  " >Noix de coquilles Saint-Jacques</h4>
+                                <p class="menu__description__paragraph">Sur lit de purée de céleri-rave</p>
                             </div>
         
                             <div class="menu__price">
@@ -162,17 +163,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--p2">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--p2">
         
                             <div class="menu__description">
-                                <h4>Langoustine poêlée</h4>
-                                <p>Purée de patate douce</p>
+                                <h4 class="menu__description__title-h4  " >Langoustine poêlée</h4>
+                                <p class="menu__description__paragraph">Purée de patate douce</p>
                             </div>
         
                             <div class="menu__price">
@@ -181,17 +182,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
         
-                        <div class="menu__choice menu__anim menu__anim--p3">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--p3">
         
                             <div class="menu__description">
-                                <h4>Mijoté de queue de boeuf </h4>
-                                <p>Et riz sauvage aux zestes de citron</p>
+                                <h4 class="menu__description__title-h4  " >Mijoté de queue de boeuf </h4>
+                                <p class="menu__description__paragraph">Et riz sauvage aux zestes de citron</p>
                             </div>
         
                             <div class="menu__price">
@@ -200,7 +201,7 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                            
@@ -211,14 +212,14 @@
                     <article class="menu__list">
         
                         <div class="menu__sub-title">
-                            <h3>DESSERTS</h3>
+                            <h3 class="menu__sub-title__h3">DESSERTS</h3>
                         </div>
                         
-                        <div class="menu__choice menu__anim menu__anim--d1">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--d1">
         
                             <div class="menu__description">
-                                <h4>Macaron noisette et chocolat</h4>
-                                <p>Glace au caramel brun et sel de Guérande</p>
+                                <h4 class="menu__description__title-h4  " >Macaron noisette et chocolat</h4>
+                                <p class="menu__description__paragraph">Glace au caramel brun et sel de Guérande</p>
                             </div>
         
                             <div class="menu__price">
@@ -227,17 +228,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
             
-                        <div class="menu__choice menu__anim menu__anim--d2">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--d2">
         
                             <div class="menu__description">
-                                <h4>Baba au rhum revisité</h4>
-                                <p>Avec son coulis de citron</p>
+                                <h4 class="menu__description__title-h4  " >Baba au rhum revisité</h4>
+                                <p class="menu__description__paragraph">Avec son coulis de citron</p>
                             </div>
         
                             <div class="menu__price">
@@ -246,17 +247,17 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
                         </div>
             
-                        <div class="menu__choice menu__anim menu__anim--d3">
+                        <div class="menu__choice menu__choice--is-hover menu__anim menu__anim--d3">
         
                             <div class="menu__description">
-                                <h4>Tarte au citron meringuée</h4>
-                                <p>Déstructurée</p> 
+                                <h4 class="menu__description__title-h4  " >Tarte au citron meringuée</h4>
+                                <p class="menu__description__paragraph">Déstructurée</p> 
                             </div>
         
                             <div class="menu__price">
@@ -265,7 +266,7 @@
         
                             <div class="menu__confirmation">
                                 <div class="menu__wrap-icon">
-                                    <span><i class="fas fa-check-circle"></i></span>
+                                    <i class="fas fa-check-circle menu__check-circle"></i>
                                 </div>
                             </div>
                             
@@ -275,7 +276,7 @@
                 </div>
     
                 <div class="container-btn">
-                    <button class="btn">Commander</button>
+                    <button class="btn btn--is-hover">Commander</button>
                 </div>
 
             </div>
@@ -288,15 +289,15 @@
 
         <!-- footer -->
 
-    <footer class="footer">
-        <h3 class="footer__title">Ohmyfood</h3>
-        <div class="footer__link">
-            <a href="#"><i class="footer__icon1 fas fa-utensils"></i>Proposer un restaurant</a>
-            <a href="#"><i class="fas fa-hands-helping footer__icon2 " ></i>Devenir partenaire</a>
-            <a href="#">Mentions légales</a>
-            <a href="mailto:contact@ohmyfood.com">Contact</a>
-        </div>
-    </footer>
+        <footer class="footer">
+            <h3 class="footer__title">Ohmyfood</h3>
+            <div class="footer__container-link">
+                <a class="footer__link footer__link--is-hover" href="#"><i class="footer__icon1 fas fa-utensils"></i>Proposer un restaurant</a>
+                <a class="footer__link footer__link--is-hover" href="#"><i class="fas fa-hands-helping footer__icon2 " ></i>Devenir partenaire</a>
+                <a class="footer__link footer__link--is-hover" href="#">Mentions légales</a>
+                <a class="footer__link footer__link--is-hover" href="mailto:contact@ohmyfood.com">Contact</a>
+            </div>
+        </footer>
 
         <!-- end footer -->
 

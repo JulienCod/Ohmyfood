@@ -163,13 +163,13 @@ h1 {
   box-shadow: 3px 3px 17px -10px #000000;
   transition: all 0.3s ease-in-out;
 }
-.btn:hover {
+.btn--is-hover:hover {
   opacity: 0.9;
   transform: scale(1.02);
   box-shadow: 3px 3px 17px -5px #000000;
 }
 
-.heart__container {
+.heart-group {
   margin-right: 1rem;
   font-size: 1.5rem;
   position: relative;
@@ -177,7 +177,7 @@ h1 {
   padding: 1rem;
   bottom: 1.1rem;
 }
-.heart__container input[type=checkbox] {
+.heart-group__check[type=checkbox] {
   position: absolute;
   cursor: pointer;
   height: 1.8rem;
@@ -185,14 +185,16 @@ h1 {
   z-index: 2;
   opacity: 0;
 }
-.heart__container input[type=checkbox]:checked ~ .heart__bold {
+.heart-group__check[type=checkbox]:checked ~ .heart-group__check--is-checked {
   opacity: 1;
   transform: scale(1.25);
 }
-.heart__container:hover .heart__light {
-  transform: scale(1.05);
+.heart-group:hover .heart--is-hover {
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.heart__bold {
+.heart-group__bold {
   position: absolute;
   opacity: 0;
   z-index: 1;
@@ -202,28 +204,27 @@ h1 {
   transition: all 0.3s ease-in-out;
   transform: scale(0);
 }
-.heart__light {
+.heart-group__light {
   position: absolute;
 }
 
-#header-title {
+.header {
   display: flex;
   align-items: center;
   position: relative;
   padding: 0.5rem 1.25rem;
   box-shadow: 3px 3px 17px -10px #000000;
 }
-#header-title i {
-  font-size: 1.25rem;
-}
-#header-title h1 {
-  text-align: center;
-  flex-grow: 1;
-}
-
-header a {
+.header__link {
   text-decoration: none;
   color: #000000;
+}
+.header__icon {
+  font-size: 1.25rem;
+}
+.header__title {
+  text-align: center;
+  flex-grow: 1;
 }
 
 .footer {
@@ -236,7 +237,7 @@ header a {
   margin: auto;
   padding-bottom: 1rem;
 }
-.footer__link {
+.footer__container-link {
   max-width: 1440px;
   margin: auto;
   display: flex;
@@ -244,12 +245,12 @@ header a {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.footer a {
+.footer__link {
   text-decoration: none;
   color: #ffffff;
   width: fit-content;
 }
-.footer a:hover {
+.footer__link--is-hover:hover {
   text-decoration: underline;
 }
 .footer__icon1 {
@@ -259,55 +260,57 @@ header a {
   padding-right: 0.5rem;
 }
 
-#top {
+.top {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
 }
-#top #location {
+
+.location {
   background-color: #EAEAEA;
   display: flex;
   justify-content: center;
   padding: 1rem;
   font-size: 1rem;
 }
-#top #location p {
+.location__paragraph {
   padding: 0rem 1.5rem;
   opacity: 0.7;
 }
-#top #location i {
+.location__icon {
   opacity: 0.5;
 }
-#top #explorer {
+
+.explorer {
   background-color: #F6F6F6;
   padding: 3rem 1.5rem;
 }
-#top #explorer__title {
+.explorer__title {
   font-size: 1.5rem;
   padding: 0rem 1rem;
 }
-#top #explorer__para {
+.explorer__para {
   padding: 1rem 0rem 2rem;
   font-size: 1.1rem;
   opacity: 0.7;
 }
-#top #explorer__btn {
+.explorer__link {
   padding: 1rem 1.5rem;
   text-decoration: none;
   color: #FFFFFF;
 }
 
-#operation {
+.operation {
   padding: 1rem 1rem 4rem;
   counter-reset: steps;
   max-width: 1440px;
   margin: auto;
 }
-#operation h2 {
+.operation__title {
   padding: 1.5rem 0rem;
 }
-#operation ol {
+.operation__list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
@@ -315,11 +318,11 @@ header a {
   gap: 1rem;
 }
 @media screen and (min-width: 921px) {
-  #operation ol {
+  .operation__list {
     flex-direction: row;
   }
 }
-#operation li {
+.operation__stage {
   display: flex;
   align-items: center;
   flex: 1;
@@ -331,12 +334,7 @@ header a {
   font-weight: bold;
   box-shadow: 3px 3px 17px -10px #000000;
 }
-#operation li i {
-  margin-right: 1.5rem;
-  font-size: 1.5rem;
-  opacity: 0.5;
-}
-#operation li::before {
+.operation__stage::before {
   content: counter(steps);
   counter-increment: steps;
   color: #FFFFFF;
@@ -346,20 +344,25 @@ header a {
   position: relative;
   right: 1.5rem;
 }
-#operation li:hover {
+.operation__stage:hover {
   background: #9356dc;
   background: rgba(147, 86, 220, 0.1);
 }
-#operation li:hover i {
+.operation__stage:hover .operation__stage--is-hover {
   color: #9356dc;
   opacity: 1;
+}
+.operation__icon {
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.5;
 }
 
 .restaurants {
   padding: 1rem 1rem 4rem;
   background: #F6F6F6;
 }
-.restaurants h2 {
+.restaurants__title-h2 {
   padding: 1.5rem 0rem;
   max-width: 1440px;
   margin: auto;
@@ -370,10 +373,6 @@ header a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-.restaurants__list a {
-  text-decoration: none;
-  color: #000000;
 }
 
 .card {
@@ -388,7 +387,11 @@ header a {
     flex: 1 1 calc(50% - 1rem);
   }
 }
-.card:hover {
+.card__link {
+  text-decoration: none;
+  color: #000000;
+}
+.card--is-hover:hover {
   transform: scale(1.02);
 }
 .card__container-img {
@@ -421,14 +424,10 @@ header a {
 .card__description {
   padding: 1rem;
 }
-.card__icon {
-  position: relative;
-  margin-right: 2rem;
-}
-.card__icon .fa-heart {
+.card__heart {
   font-size: 1.8rem;
   position: absolute;
-  right: -1rem;
+  right: -2rem;
   bottom: -1.5rem;
   padding: 1rem;
 }

@@ -33,13 +33,13 @@ h1 {
   box-shadow: 3px 3px 17px -10px #000000;
   transition: all 0.3s ease-in-out;
 }
-.btn:hover {
+.btn--is-hover:hover {
   opacity: 0.9;
   transform: scale(1.02);
   box-shadow: 3px 3px 17px -5px #000000;
 }
 
-.heart__container {
+.heart-group {
   margin-right: 1rem;
   font-size: 1.5rem;
   position: relative;
@@ -47,7 +47,7 @@ h1 {
   padding: 1rem;
   bottom: 1.1rem;
 }
-.heart__container input[type=checkbox] {
+.heart-group__check[type=checkbox] {
   position: absolute;
   cursor: pointer;
   height: 1.8rem;
@@ -55,14 +55,16 @@ h1 {
   z-index: 2;
   opacity: 0;
 }
-.heart__container input[type=checkbox]:checked ~ .heart__bold {
+.heart-group__check[type=checkbox]:checked ~ .heart-group__check--is-checked {
   opacity: 1;
   transform: scale(1.25);
 }
-.heart__container:hover .heart__light {
-  transform: scale(1.05);
+.heart-group:hover .heart--is-hover {
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.heart__bold {
+.heart-group__bold {
   position: absolute;
   opacity: 0;
   z-index: 1;
@@ -72,28 +74,27 @@ h1 {
   transition: all 0.3s ease-in-out;
   transform: scale(0);
 }
-.heart__light {
+.heart-group__light {
   position: absolute;
 }
 
-#header-title {
+.header {
   display: flex;
   align-items: center;
   position: relative;
   padding: 0.5rem 1.25rem;
   box-shadow: 3px 3px 17px -10px #000000;
 }
-#header-title i {
-  font-size: 1.25rem;
-}
-#header-title h1 {
-  text-align: center;
-  flex-grow: 1;
-}
-
-header a {
+.header__link {
   text-decoration: none;
   color: #000000;
+}
+.header__icon {
+  font-size: 1.25rem;
+}
+.header__title {
+  text-align: center;
+  flex-grow: 1;
 }
 
 .footer {
@@ -106,7 +107,7 @@ header a {
   margin: auto;
   padding-bottom: 1rem;
 }
-.footer__link {
+.footer__container-link {
   max-width: 1440px;
   margin: auto;
   display: flex;
@@ -114,12 +115,12 @@ header a {
   flex-wrap: wrap;
   gap: 0.5rem;
 }
-.footer a {
+.footer__link {
   text-decoration: none;
   color: #ffffff;
   width: fit-content;
 }
-.footer a:hover {
+.footer__link--is-hover:hover {
   text-decoration: underline;
 }
 .footer__icon1 {
@@ -167,10 +168,6 @@ header a {
   position: relative;
   padding: 0rem 1rem;
 }
-.menu .heart__container {
-  bottom: 0.5rem;
-  right: 0rem;
-}
 .menu__container {
   max-width: 1440px;
   display: flex;
@@ -181,6 +178,9 @@ header a {
     flex-direction: row;
     margin: 0;
   }
+}
+.menu__heart {
+  right: -2.25rem;
 }
 .menu__list {
   flex: 1;
@@ -193,7 +193,7 @@ header a {
   padding: 0.5rem 0rem;
   position: relative;
 }
-.menu__sub-title h3 {
+.menu__sub-title__h3 {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -220,8 +220,12 @@ header a {
   margin: -1rem -1rem -1rem -1rem;
   padding-right: 0.5rem;
 }
-.menu__choice:hover i {
+.menu__choice:hover .menu__check-circle {
   transform: rotateZ(0deg);
+}
+.menu__check-circle {
+  transform: rotateZ(-240deg);
+  transition: transform 0.2s ease-in-out 0.3s;
 }
 .menu__anim {
   animation: menu 0.5s ease-in-out 0s 1 normal both;
@@ -292,7 +296,7 @@ header a {
   overflow: hidden;
   flex: 1 1 calc(100% - 60px);
 }
-.menu__description h4, .menu__description p {
+.menu__description__title-h4, .menu__description__paragraph {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -313,10 +317,6 @@ header a {
   font-size: 1.5rem;
   margin: -1rem -6.5rem -1rem -1rem;
   transition: all 0.3s ease-in 0.15s;
-}
-.menu__wrap-icon i {
-  transform: rotateZ(-240deg);
-  transition: transform 0.2s ease-in-out 0.3s;
 }
 
 .container-btn {
