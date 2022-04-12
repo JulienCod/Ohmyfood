@@ -180,8 +180,10 @@ h1 {
 .heart-group__check[type=checkbox] {
   position: absolute;
   cursor: pointer;
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 1.9rem;
+  width: 1.9rem;
+  right: -1rem;
+  bottom: -0.5rem;
   z-index: 2;
   opacity: 0;
 }
