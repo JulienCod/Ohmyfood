@@ -5,13 +5,13 @@
     padding: 1rem 3rem;
     border-radius: 1.6rem;
     border: none;
-    @include gradient-color;
+    background: linear-gradient(variables.$color-secondary, variables.$color-primary);
     color: #FFFFFF;
     @include shadow-base;
     transition: all 0.3s ease-in-out;
     &--is-hover:hover{
         opacity:0.9;
         transform: scale(1.02);
-        @include shadow-hover;
+        box-shadow: 3px 3px 17px -5px #000000;
     }
 }

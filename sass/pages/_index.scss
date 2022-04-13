@@ -2,8 +2,7 @@
 
         // Section top
 .top{
-    display: flex;
-    flex-direction: column;
+    @include flex-direction(column);
     justify-content: space-around;
     text-align: center;
 }
