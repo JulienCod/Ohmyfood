@@ -10,6 +10,6 @@ https://juliencod.github.io/Ohmyfood/
 
 https://github.com/JulienCod/Ohmyfood
 
-## Languages used.
+## Languages.
 
 HTML5, CSS3 with Sass preprocessor
